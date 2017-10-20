@@ -1,10 +1,7 @@
 <h4>Exercice 1</h4>
 
-<?php
 
-foreach($objectClio as $value){
-  ?>
-  <table class="">
+  <table class="table">
       <thead>
         <tr>
           <th>NB OF DOORS</th>
@@ -14,14 +11,13 @@ foreach($objectClio as $value){
       </thead>
       <tbody>
       <?php
-      foreach ($donnees as $value) {?>
+      foreach ($objectsClio as $value) {?>
         <tr>
             <td><? echo $value->getDoors();?></td>
             <td><? echo $value->getColor();?></td>
             <td><? echo $value->getPrice();?></td>
         </tr>
         <?php
-        }
         }?>
         </tbody>
       </table>

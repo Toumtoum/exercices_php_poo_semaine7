@@ -3,16 +3,16 @@
 
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="../js/plugins.js"></script>
+  <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 
 
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>

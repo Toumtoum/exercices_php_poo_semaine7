@@ -9,20 +9,20 @@ protected $color;
 
 // Statics Attributes
 
-protected static $price;
+protected static $price = 10000;
 
 // Class Constants
 
-const 3 = 'Tree Doors';
-const 5 = 'Five Doors';
-const COLORS = ['blanc' => 0001,
-                'noir' => 0002,
-                'bleu'=> 0003,
-                'rouge' => 0004,
-                'vert' => 0005,
-                'gris'=> 0006,
-                'jaune' => 0007,
-                'viloet' => 0008 ]
+const TREE_DOORS = 3;
+const FIVE_DOORS = 5;
+const COLORS = ['blanc' => 1000,
+                'noir' => 2000,
+                'bleu'=> 3000,
+                'rouge' => 4000,
+                'vert' => 5000,
+                'gris'=> 6000,
+                'jaune' => 7000,
+                'violet' => 8000 ];
 
 
 
@@ -48,13 +48,13 @@ public function __construct(array $donnees){
 
 public function getDoors(){
 
-  return $this->doors;
+return $this->doors;
 
 }
 
 public function getColor(){
 
-return $this->colors;
+return $this->color;
 
 }
 
@@ -64,17 +64,13 @@ return self::$price;
 
 }
 
+// SETTERS
+
 public function setDoors(int $nbDoors){
 
-  if(in_array($nbDoors,[self::3,self::5])){
+  if(in_array($nbDoors,[self::TREE_DOORS,self::FIVE_DOORS])){
 
-    $this->$doors = $nbDoors;
-
-  }
-
-  else {
-
-    echo 'You only have the choice against TREE_DOORS or FIVE_DOORS';
+    $this->doors = $nbDoors;
 
   }
 }
@@ -84,16 +80,16 @@ public function setColor(string $color){
 foreach (self::COLORS as $key => $value) {
   if ($key == strtolower($color)){
 
-    $this->$color = $key[value];
+    $this->color = $value;
 
   }
 }
 
 }
 
-public static function setPrice($reatilPrice){
+public function setPrice($retailPrice){
 
-  static::$price=$retailPprice;
+  static::$price=$retailPrice;
 
 }
 
