@@ -66,7 +66,7 @@ Class Cats{
 
   public function setName(string $name){
 
-    if (strlen($name)=< 15){
+    if (strlen($name) >= 15){
     $this->name = $name;
     }
   }
@@ -76,9 +76,11 @@ Class Cats{
     $colorGiven = strtolower($color);
 
     foreach (self::color as $value) {
-      if ($value == $colorGiven)
+      if ($value == $colorGiven){
+        $this->color = $colorGiven;
+      }
     }
-    $this->color = $colorGiven;
+
 
   }
 
