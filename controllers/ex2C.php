@@ -20,9 +20,15 @@ require_once '../models/connectDb.php';
 
 
     $cat = new Cat($_POST);
-    var_dump($cat);
+    $check = $cat -> checkData();
+    var_dump($check);
 
+    if (in_array('error', $check)){
+      echo 'ONE OR MORE INVALID DATA CHECK YOUR INPUTS';
+    }
+    else {
     $manager -> add($cat);
+    }
 
   }
 

@@ -18,6 +18,8 @@ Class Cat{
   const MIN_AGE = 0;
   const MAX_AGE = 30;
 
+  const error = 'error';
+
   // Constructor
   public function __construct(array $donnees){
 
@@ -62,12 +64,27 @@ Class Cat{
 
   }
 
+  public function checkData(){
+
+    $array = [$this->getName(),
+                $this->getAge(),
+                $this->getColor(),
+                $this->getSex()];
+
+    return $array;
+
+  }
+
   // SETTERS
 
   public function setName(string $name){
 
     if (strlen($name) <= 15){
     $this->name = $name;
+    }
+
+    else {
+      $this->name=self::error;
     }
   }
 
@@ -78,6 +95,9 @@ Class Cat{
     foreach (self::color as $value) {
       if ($value == $colorGiven){
         $this->color = $colorGiven;
+      }
+      else {
+        $this->color=self::error;
       }
     }
 
@@ -91,6 +111,11 @@ Class Cat{
       $this->age=$age;
 
     }
+
+    else {
+      $this->age=self::error;
+    }
+
   }
 
   public function setSex(string $sex){
@@ -99,6 +124,10 @@ Class Cat{
 
       $this->sex = $sex;
 
+    }
+
+    else{
+      $this->sex=self::error;
     }
 
 
