@@ -9,13 +9,14 @@ class catsManager{
 
   }
 
-  public function add(Cats $cat){
+  public function add(Cat $cat){
 
-    $req = $this->_db -> prepare('INSERT INTO cats (name,color,sex,age) VALUES (:name,:color,:sex:age)');
-    $req -> execute(['nom' => $cat -> getName(),
-                    'color' => $cat -> getcolor(),
+    $req = $this->_db -> prepare('INSERT INTO cats (name,color,sex,age) VALUES (:name,:color,:sex,:age)');
+    $req -> execute(['name' => $cat -> getName(),
+                    'color' => $cat -> getColor(),
                     'sex' => $cat -> getSex(),
-                    'age' => $cat -> getAge()]);
+                    'age' => $cat -> getAge()
+                  ]);
 
   }
 

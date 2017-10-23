@@ -1,6 +1,6 @@
 <?php
 
-Class Cats{
+Class Cat{
 
   // Attributes
 
@@ -66,7 +66,7 @@ Class Cats{
 
   public function setName(string $name){
 
-    if (strlen($name) >= 15){
+    if (strlen($name) <= 15){
     $this->name = $name;
     }
   }
