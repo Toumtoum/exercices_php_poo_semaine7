@@ -22,6 +22,9 @@
   </select>
   <input type="submit" value="Add new cat" name="create" />
   </form>
+  <?php if(isset($_SESSION['error'])){
+    echo $_SESSION['error'];
+  } ?>
 </div>
 
 <table class="table">

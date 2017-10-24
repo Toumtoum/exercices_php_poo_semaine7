@@ -96,9 +96,6 @@ Class Cat{
       if ($value == $colorGiven){
         $this->color = $colorGiven;
       }
-      else {
-        $this->color=self::error;
-      }
     }
 
 
@@ -125,12 +122,6 @@ Class Cat{
       $this->sex = $sex;
 
     }
-
-    else{
-      $this->sex=self::error;
-    }
-
-
 
   }
 
