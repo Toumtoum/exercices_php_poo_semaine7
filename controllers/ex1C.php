@@ -1,6 +1,6 @@
 <?php
 
-require '../models/entites/clio.php';
+require './models/entites/clio.php';
 
 $objectsClio = [ 1 => new Clio(['doors'=>3,'color'=>'bleu','price'=>12000]),
                 2 => new Clio(['doors'=>5,'color'=>'bleu',12000]),
@@ -11,4 +11,4 @@ $objectsClio = [ 1 => new Clio(['doors'=>3,'color'=>'bleu','price'=>12000]),
               ];
 
 
-include '../vues/ex1.php';
+include './vues/ex1.php';

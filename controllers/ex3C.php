@@ -1,8 +1,8 @@
 <?php
 
-require '../models/entites/form.php';
+require './models/entites/form.php';
 
-include '../vues/ex3.php';
+include './vues/ex3.php';
 
 $form = new Form2('','post','test');
 $form->setTexte('test','test');

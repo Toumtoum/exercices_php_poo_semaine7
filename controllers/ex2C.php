@@ -1,11 +1,11 @@
 <?php
 
-require '../models/entites/Cats.php';
-require '../models/catsManager.php';
+require './models/entites/Cats.php';
+require './models/catsManager.php';
 
 // DB CONNECTION
 
-require_once '../models/connectDb.php';
+require_once './models/connectDb.php';
 
   $db = connectBdd();
 
@@ -34,4 +34,4 @@ require_once '../models/connectDb.php';
 
   }
 
-include '../vues/ex2.php';
+include './vues/ex2.php';
